@@ -3,7 +3,7 @@ main = "_worker.js"
 compatibility_date ="2026-02-28"
 
 #保留原有环境变量
-keep_vars = true
+#keep_vars = true
 
 # 禁用 workers.dev 部署
 workers_dev = false
@@ -29,6 +29,7 @@ id = "10cc8b25d39048d0baf12c07ea389b34"
 # 环境变量
 [vars]
 URL = "1101"             # 普通文本
+ADMIN = "asdfzxcvzcz1226"
 
 # 可观测性配置
 [observability]
@@ -37,3 +38,4 @@ URL = "1101"             # 普通文本
 
   [observability.traces]
   enabled = true
+
