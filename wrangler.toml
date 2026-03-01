@@ -1,8 +1,39 @@
-name = "v20251104"
+name = "edgetunnel-v20260228"
 main = "_worker.js"
-compatibility_date = "2025-11-04"
+compatibility_date ="2026-02-28"
+
+#保留原有环境变量
 keep_vars = true
 
-#[[kv_namespaces]]
-#binding = "KV"			#KV绑定名默认不可修改
-#id = ""				#KV数据库id
+# 禁用 workers.dev 部署
+workers_dev = false
+
+# 禁用预览 URL
+preview_urls = false
+
+# 自定义域路由
+[[routes]]
+pattern = "zhangchongzhe.dpdns.org"
+zone_name = "zhangchongzhe.dpdns.org"
+custom_domain = true
+
+# 部署策略
+[placement]
+mode = "smart"
+
+# KV 命名空间
+[[kv_namespaces]]
+binding = "KV"
+id = "10cc8b25d39048d0baf12c07ea389b34"
+
+# 环境变量
+[vars]
+URL = "1101"             # 普通文本
+
+# 可观测性配置
+[observability]
+  [observability.logs]
+  enabled = true
+
+  [observability.traces]
+  enabled = true
