@@ -30,6 +30,7 @@ id = "bcc6aa5aa355440fa81987d804ca12f8"
 [vars]
 URL = "1101"             # 普通文本
 ADMIN = "asdfzxcvzcz1226"
+OFF_LOG = "true"
 
 # 可观测性配置
 [observability]
